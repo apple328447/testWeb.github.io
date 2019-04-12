@@ -1,0 +1,233 @@
+﻿
+
+<!DOCTYPE html>
+
+<style type="text/css">
+    body {
+        height: 100%;
+    }
+    *{
+        box-sizing:border-box;
+    }
+    .inner-width {
+        width: 100%;
+        max-width: 1200px;
+        margin: auto;
+        padding: 0 20px;
+    }
+    .section-title{
+        text-align:center;
+        color:#ddd;
+        text-transform:uppercase;
+        font-size:30px;
+    }
+    .Img_container{
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+    .Img_box{
+        padding: 10px;
+        text-align: center;
+        color: #ddd;
+        cursor: pointer;
+    }
+    .Img_container_box img {
+        width: 300px;
+        background-size: auto;
+    }
+    .Img_container_box {
+        max-width: 33.33%;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .Img_container {
+        height: 100%;
+        width: 100%;
+        position:relative;
+    }
+    .Img_container_box {
+        height: 500px;
+        width: 375px;
+        overflow: hidden;
+        backface-visibility: hidden;
+        text-align: center;
+       
+
+    }
+    .front, .back { 
+        overflow: hidden;
+        backface-visibility: hidden;
+        position: absolute;
+        transition: transform .6s linear;
+         position: absolute;
+  
+    }
+    .front {
+        transform: perspective(600px) rotateY(0deg);
+        width: 300px;
+        height: 443.92px;
+        background: #000;
+    }
+        .front::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 300px;
+            height: 443.92px;
+            background: url(./Images/Us_2.jpg) no-repeat;
+            background-size: cover;
+            opacity: .5; /*會影響子元素*/
+            /*1.background-color: rgba(0,0,0,0.3);*/
+            /*2.父元素div（设置为相对定位），兄弟div1（设置为绝对定位）背景正常加透明度即可，兄弟div2（设置为绝对定位），层级关系高于div1即可。*/
+        }
+    .back {
+        transform: perspective(600px) rotateY(180deg);
+    }
+    .Img_container_box:hover > .front {
+        transform: perspective(600px) rotateY(-180deg);
+    }
+    .Img_container_box:hover > .back {
+        transform: perspective(600px) rotateY(0deg);
+    }
+    .front-content {
+        color: #ff0025;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+    }
+    .front_inner {
+        color: #D1001F;
+        text-align: center;
+        width: 100%;
+        font-family: 'Direct du Gauche' !important;
+        padding-top: 100px;
+        position: absolute;
+        z-index: 1;
+    }
+    .front_inner h2 {
+        font-size: 40px;
+        letter-spacing: 3px;
+        font-weight: 200;
+        color: #D1001F;
+       
+    }
+    .back-content {
+        margin-left: auto;
+        margin-top: auto;
+        left: 0;
+        top: 0;
+    }
+</style>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <div class="inner-width">
+            <h1 class="section-title">Our members</h1>
+            <div class="Img_container">
+                <div class="Img_container_box">
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front_inner">
+                                <h2>DOCTOR STRANGER</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="./Images/Doctor Strange_B.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="Img_container_box">
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front_inner">
+                                <h2>
+                                    MUSCLE MACHO
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="./Images/Muscle44.jpg" alt="" />
+                    </div>
+                </div>
+                <div class="Img_container_box">
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front_inner">
+                                <h2>
+                                    CHINA BOY
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <img src="./Images/Chinaboy.jpg" alt="" />
+                    </div>
+                </div>
+
+                <div class="Img_container_box">
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front_inner">
+                                <h2>
+                                    TWINS
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="./Images/Twins.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Img_container_box">
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front_inner">
+                                <h2>
+                                    DIRTY GIRL
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="./Images/DirtyGirl.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Img_container_box">
+                    <div class="front">
+                        <div class="front-content">
+                            <div class="front_inner">
+                                <h2>
+                                    THE NUN
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="back">
+                        <div class="back-content">
+                            <img src="./Images/The Nun.jpg" alt="" />
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
