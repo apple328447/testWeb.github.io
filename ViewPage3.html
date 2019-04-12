@@ -1,31 +1,20 @@
-﻿@{
-    Layout = "~/Views/Shared/FormLayout.cshtml";
-}
+﻿
 
 <!DOCTYPE html>
 
 <style type="text/css">
-    /**{
-        margin:0;
-        padding:0;
-        text-decoration:none;
-        font-family:"montserrat";
-    }*/
-    /*body{
-        background:#333;
-    }*/
     .middle {
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%); /*(x軸,y軸)移動*/
+        transform: translate(-50%,-50%); 
     }
     .card {
-        cursor: pointer; /*滑鼠移上去要變成什麼*/
+        cursor: pointer; 
         width: 340px;
         height: 480px;
         overflow: hidden;
-        backface-visibility: hidden; /*属性指定当元素背面朝向观察者时是否可见。元素的背面总是透明的*/
+        backface-visibility: hidden; 
     }
     .front,.back{
         width:100%;
@@ -100,7 +89,6 @@
         opacity: .5;
     }
     .back-content {
-        /*color: #00ff21;*/
         color: #990016;
         text-align: center;
         width: 100%;
@@ -108,7 +96,6 @@
     }
     .back-content_inner{
         padding-bottom:160px;
-        /*margin-top:5px;*/
     }
     .back-content_inner h2 {
         font-size: 20px;
@@ -123,19 +110,19 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
+	<script src="https://use.fontawesome.com/releases/v5.8.1/js/all.js"></script>
     <title></title>
 </head>
 <body>
     <div class="card middle">
         <div class="front">
-            <img src="~/Images/44US.jpg" alt=""/>
+            <img src="./Images/44US.jpg" alt=""/>
         </div>
         <div class="back">
             <div class="back-content middle">
                 <div class="back-content_inner">
-                    <img src="~/Images/44US_2.jpg" alt="aaa" class="box-img" />
+                    <img src="./Images/44US_2.jpg" alt="aaa" class="box-img" />
                     <h2>GW 44</h2>
-                    @*<span>I Like Apple</span>*@
                     <div class="sm">
                         <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
                         <a href="#"><i class="fab fa-instagram" aria-hidden="true"></i></a>
