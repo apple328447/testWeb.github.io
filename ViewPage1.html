@@ -1,0 +1,119 @@
+﻿
+
+<!DOCTYPE html>
+
+
+
+<style type="text/css">
+    body {
+        height: 100%;
+        /*background: black;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;*/
+        /*background: url(../../Images/Us_4.jpg) no-repeat;*/
+    }
+
+    .background {
+        background: black;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        text-align: center;
+    }
+
+        .background::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: url(../../Images/Us_3.jpg) no-repeat;
+            background-size: cover;
+            opacity: .3;
+        }
+    .page-content{
+        z-index:1;
+    } .text2 {
+        font-size: 30px;
+        color: #520;
+        animation: animate_click 3s linear alternate infinite;
+    }
+    @@font-face {
+    font-family: scared;
+    src: url("../../fonts/scared.ttf")
+       }
+    p {
+        font-family:scared;
+        position: relative;
+        /*font-family: sans-serif;*/
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 2em;
+        letter-spacing: 4px;
+        overflow: hidden;
+        background: linear-gradient(90deg,#000,#fff,#000);
+        background-repeat: no-repeat;
+        background-size: 70%;
+        animation: animate 4s linear alternate infinite;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: rgba(255,255,255,.01);
+    }
+    @@keyframes animate {
+        0% {
+            background-position: -100%;
+        }
+
+        100% {
+            background-position: 100%;
+        }
+    }
+    @@keyframes animate_click {
+        0% {
+            color: black;
+        }
+
+        100% {
+            letter-spacing: 2px;
+            color: #fff;
+        }
+    }
+</style>
+
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" type="text/css" href="https://www.w3schools.com/w3css/4/w3.css"/>
+    <title></title>
+</head>
+<body>
+    <div>
+        <div class="background">
+            <div class="page-content">
+                <p>『我必使災禍臨到他們，是他們不能逃脫的。他們必向我哀求，我卻不聽。』<br /> - 耶利米書第11章11節</p>
+                <span class="text2" onclick="changeView();"> Click Me </span>
+            </div>
+        </div>
+    </div>
+</body>
+@*很久…很久…以前，一名女孩有個影子，女孩和影子共用了一個靈魂*@
+@*耶利米書第11章11節
+    『我必使災禍臨到他們，是他們不能逃脫的。他們必向我哀求，我卻不聽。』*@
+<script type="text/javascript">
+    $(function () {
+        var mainWorkspace_height = $(window.parent.document).height();
+    });
+
+    function changeView() {
+        window.location.href = './ViewPage2';
+    }
+
+</script>
